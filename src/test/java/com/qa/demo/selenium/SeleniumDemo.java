@@ -8,8 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 
@@ -20,10 +20,10 @@ public class SeleniumDemo {
 
 	@BeforeEach
 	void init() {
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
+		// ChromeOptions options = new ChromeOptions();
+		// options.addArguments("--remote-allow-origins=*");
 		// creates new window
-		this.driver = new ChromeDriver(options);
+		this.driver = new FirefoxDriver();
 		// maximises it
 		this.driver.manage().window().maximize();
 	}
