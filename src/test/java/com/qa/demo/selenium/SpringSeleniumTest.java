@@ -41,8 +41,6 @@ public class SpringSeleniumTest {
 
     @BeforeEach
     void init() {
-        // FirefoxOptions options = new FirefoxOptions();
-        // options.addArguments("--remote-allow-origins=*");
         this.driver = new FirefoxDriver();
         this.driver.manage().window().maximize();
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(3));
